@@ -29,7 +29,7 @@ function NavBar() {
       <div className="nav-buttons flex items-center gap-5">
         <button className="hover:text-blue-600">Sign in</button>
         <button
-          className="px-6 py-2 bg-[#3379e9] rounded-lg text-white text-center 
+          className="px-6 py-2 bg-dark-blue rounded-lg text-white text-center 
         transition hover:bg-blue-600"
         >
           Sign up

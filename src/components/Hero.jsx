@@ -2,11 +2,11 @@ import React from "react";
 
 function Hero() {
   return (
-    <div className="hero py-12 w-[92%] ml-auto flex flex-row max-[855px]:flex-col-reverse">
-      <div className="background">
+    <section className="hero py-12 w-[92%] ml-auto flex flex-row max-[855px]:flex-col-reverse">
+      <div className="background max-[700px]:h-[500px]">
         <img
           className="w-full h-full"
-          src="/public/landing-page/Frame.png"
+          src="/landing-page/Frame.png"
           alt="frame"
         />
       </div>
@@ -16,7 +16,7 @@ function Hero() {
          max-[1300px]:w-[80%]"
         >
           Find, book and rent a car{" "}
-          <span className="text-[#1572D3]">Easily</span>
+          <span className="text-dark-blue">Easily</span>
         </h1>
         <p className="text-[18px] text-black mt-6 w-[55%] max-[1300px]:w-[90%]">
           Get a car wherever and whenever you need it with your IOS and Android
@@ -32,9 +32,9 @@ function Hero() {
         </div>
       </div>
       <div className="flex items-center justify-center scale-up">
-        <img src="/public/landing-page/hero-img.png" alt="car" />
+        <img src="/landing-page/hero-img.png" alt="car" />
       </div>
-    </div>
+    </section>
   );
 }
 

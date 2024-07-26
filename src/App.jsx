@@ -8,7 +8,7 @@ import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <div className="app relative">
+    <div className="app relative max-w-[2000px] mx-auto">
       <Router>
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />

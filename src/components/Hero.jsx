@@ -2,7 +2,7 @@ import React from "react";
 
 function Hero() {
   return (
-    <section className="hero py-12 w-[92%] ml-auto flex flex-row max-[855px]:flex-col-reverse">
+    <section className="hero py-12 w-[92%] ml-auto flex justify-between flex-row max-[855px]:flex-col-reverse">
       <div className="background max-[700px]:h-[500px]">
         <img
           className="w-full h-full"

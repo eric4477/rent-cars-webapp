@@ -19,7 +19,7 @@ function SearchInput() {
       >
         <CiLocationOn className="absolute text-3xl text-dark-gray font-bold top-1/2 transform -translate-y-1/2 left-4" />
         <input
-          className="w-[80%] max-[760px]:w-[70%] max-[510px]:w-full py-[14px] outline-none pl-14 rounded-l-md text-black 
+          className="w-full py-[14px] max-[510px]:pr-32 outline-none pl-14 pr-52 rounded-md text-base text-black 
            focus:border-blue-400  placeholder:font-medium"
           type="text"
           placeholder="Search By Name"
@@ -27,8 +27,8 @@ function SearchInput() {
           value={searchInput}
         />
         <button
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-dark-blue text-white px-8 py-2 
-           hover:bg-blue-600 rounded-lg max-[510px]:hidden"
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-dark-blue text-white px-9 py-2 
+           hover:bg-blue-600 rounded-lg max-[510px]:px-4"
           type="submit"
         >
           Search

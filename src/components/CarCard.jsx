@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { GoArrowRight } from "react-icons/go";
 import starIcon from "../../public/card/star.png";
 import userIcon from "../../public/card/user.png";
@@ -14,9 +13,6 @@ import {
 function CarCard({ car, loading, error }) {
   if (loading) return <div className="spinner" />;
   if (error) return <p>Error: {error.message}</p>;
-  useEffect(() => {
-    console.log(car);
-  }, []);
   return (
     <div className="car-card shadow-custom-very-dark px-4 transition w-[265px] hover:scale-105 pt-7 pb-6 rounded-xl">
       <div className="car-image w-[210px] h-[105px] mb-4">

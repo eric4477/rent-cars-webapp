@@ -3,11 +3,14 @@ import CarCard from "../components/CarCard";
 import { fetchFirstCars } from "../api/fetchFirstCars";
 import { GoArrowRight } from "react-icons/go";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function CarsRental() {
   const [firstCars, setFirstCars] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -16,11 +19,16 @@ export default function CarsRental() {
         setLoading(false);
       } catch (error) {
         setError(error);
-        setLoading(false);
       }
+      setLoading(false);
     };
     fetchData();
   }, []);
+
+  const handleClick = () => {
+    navigate("/home/cars");
+  };
+
   return (
     <section className="cars-rental-container w-[85%] mx-auto py-16">
       <SearchInput />
@@ -46,6 +54,7 @@ export default function CarsRental() {
         <button
           className=" font-medium border border-[#E0E0E0] 
         rounded-md text-sm py-3 px-7 flex justify-center items-center gap-[5px]"
+          onClick={handleClick}
         >
           Show all vehicles <GoArrowRight className="text-[20px]" />
         </button>

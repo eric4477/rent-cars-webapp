@@ -22,6 +22,14 @@
     height: 750px;
     max-width: 50%;
   }
+  .pagination .active {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .pagination button:disabled {
+    cursor: not-allowed;
+  }
   /* Animation */
   @keyframes scaleUp {
     from {

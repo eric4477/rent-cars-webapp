@@ -1,9 +1,10 @@
+import { memo } from "react";
 import { GoArrowRight } from "react-icons/go";
-import starIcon from "../../public/card/star.png";
-import userIcon from "../../public/card/user.png";
-import frameIcon from "../../public/card/Frame.png";
-import conditionIcon from "../../public/card/condition.png";
-import doorsIcon from "../../public/card/doors.png";
+import starIcon from "/public/card/star.png";
+import userIcon from "/public/card/user.png";
+import frameIcon from "/public/card/Frame.png";
+import conditionIcon from "/public/card/condition.png";
+import doorsIcon from "/public/card/doors.png";
 import {
   getRandomImg,
   getRandomRating,
@@ -79,4 +80,4 @@ function CarCard({ car, loading, error }) {
   );
 }
 
-export default CarCard;
+export default memo(CarCard);

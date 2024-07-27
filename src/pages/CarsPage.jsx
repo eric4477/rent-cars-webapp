@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 import { fetchAllCars } from "../api/fetchAllCars";
 import SearchInput from "../components/SearchInput";
 import CarCard from "../components/CarCard";
+import { searchCars } from "../api/searchCars";
 
 function CarsPage() {
   const [allCars, setAllCars] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,6 +18,7 @@ function CarsPage() {
       try {
         const data = await fetchAllCars();
         setAllCars(data);
+        console.log(data);
       } catch (err) {
         setError(err);
       }
@@ -33,7 +36,16 @@ function CarsPage() {
     currentPage * carsPerPage
   );
 
-  //handle clicks functions
+  //handle events functions
+
+  const handleSearch = async (query) => {
+    try {
+      const results = await searchCars(query);
+      setSearchResults(results);
+    } catch (error) {
+      setError(error);
+    }
+  };
 
   const handleNextPage = () => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
@@ -68,14 +80,28 @@ function CarsPage() {
             Most popular cars rental deals
           </h1>
         </div>
-        <SearchInput />
+        <SearchInput searchCars={handleSearch} />
         <div
           className="all-cars-list flex flex-row items-center flex-wrap justify-center 
          gap-x-10 gap-y-28 mt-14"
         >
-          {currentCars.map((car) => (
-            <CarCard car={car} key={car.id} loading={loading} error={error} />
-          ))}
+          {searchResults.length > 0
+            ? searchResults.map((car) => (
+                <CarCard
+                  car={car}
+                  key={car.id}
+                  loading={loading}
+                  error={error}
+                />
+              ))
+            : currentCars.map((car) => (
+                <CarCard
+                  car={car}
+                  key={car.id}
+                  loading={loading}
+                  error={error}
+                />
+              ))}
         </div>
         <div className="all-cars-footer flex justify-center pt-32">
           <div className="pagination flex flex-row items-center">

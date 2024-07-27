@@ -6,10 +6,8 @@ import {
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CarsPage from "./pages/CarsPage";
-import { fetchAllCars } from "./api/fetchAllCars";
 
 function App() {
-  fetchAllCars();
   return (
     <div className="app relative max-w-[2000px] mx-auto">
       <Router>

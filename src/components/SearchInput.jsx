@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
-function SearchInput() {
+function SearchInput({ searchCars }) {
   const [searchInput, setSearchInput] = useState("");
 
   const handleChange = (e) => {
@@ -9,6 +9,8 @@ function SearchInput() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    searchCars(searchInput);
+    setSearchInput("");
   };
 
   return (

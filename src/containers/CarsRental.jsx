@@ -3,10 +3,12 @@ import CarCard from "../components/CarCard";
 import { fetchFirstCars } from "../api/fetchFirstCars";
 import { GoArrowRight } from "react-icons/go";
 import { useEffect, useState } from "react";
+import { searchCars } from "../api/searchCars";
 import { useNavigate } from "react-router-dom";
 
 export default function CarsRental() {
   const [firstCars, setFirstCars] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
@@ -25,13 +27,27 @@ export default function CarsRental() {
     fetchData();
   }, []);
 
+  // handle events functions
+  const handleSearch = async (query) => {
+    try {
+      if (query.trim() === "") {
+        setSearchResults([]);
+      } else {
+        const results = await searchCars(query);
+        setSearchResults(results.slice(0, 2));
+      }
+    } catch (error) {
+      setError(error);
+    }
+  };
+
   const handleClick = () => {
     navigate("/home/cars");
   };
 
   return (
     <section className="cars-rental-container w-[85%] mx-auto py-16">
-      <SearchInput />
+      <SearchInput searchCars={handleSearch} />
       <div className="cars-rental-header flex flex-col items-center">
         <div className=" bg-blue-100  px-7 py-2 rounded-lg mt-6 mb-2 text-center">
           <span className="text-sm text-dark-blue font-medium">
@@ -43,12 +59,16 @@ export default function CarsRental() {
         </h1>
       </div>
       <div
-        className="cars-list flex flex-row items-center flex-wrap justify-between max-[1020px]:justify-center 
-      gap-5 mt-14"
+        className="cars-list flex flex-row items-center flex-wrap justify-center
+       gap-10 mt-14"
       >
-        {firstCars.map((car) => (
-          <CarCard car={car} key={car.id} loading={loading} error={error} />
-        ))}
+        {searchResults.length > 0
+          ? searchResults.map((car) => (
+              <CarCard car={car} key={car.id} loading={loading} error={error} />
+            ))
+          : firstCars.map((car) => (
+              <CarCard car={car} key={car.id} loading={loading} error={error} />
+            ))}
       </div>
       <div className="cars-rental-footer flex justify-center pt-20 text-[#4E4E4E]">
         <button

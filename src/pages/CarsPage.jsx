@@ -18,7 +18,6 @@ function CarsPage() {
       try {
         const data = await fetchAllCars();
         setAllCars(data);
-        console.log(data);
       } catch (err) {
         setError(err);
       }

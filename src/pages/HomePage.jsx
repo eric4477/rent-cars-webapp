@@ -1,6 +1,7 @@
 import Hero from "../components/Hero";
 import NavBar from "../components/NavBar";
 import CarsRental from "../containers/CarsRental";
+import Section1 from "../containers/Section1";
 
 function HomePage() {
   return (
@@ -8,6 +9,7 @@ function HomePage() {
       <NavBar />
       <Hero />
       <CarsRental />
+      <Section1 />
     </div>
   );
 }

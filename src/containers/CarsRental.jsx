@@ -49,12 +49,12 @@ export default function CarsRental() {
     <section className="cars-rental-container w-[85%] mx-auto py-16">
       <SearchInput searchCars={handleSearch} />
       <div className="cars-rental-header flex flex-col items-center">
-        <div className=" bg-blue-100  px-7 py-2 rounded-lg mt-6 mb-2 text-center">
+        <div className=" bg-blue-100  px-7 py-2 rounded-lg mt-6  text-center">
           <span className="text-sm text-dark-blue font-medium">
             POPULAR RENTAL DEALS
           </span>
         </div>
-        <h1 className="text-[38px] text-light-black font-medium max-[555px]:text-4xl max-[655px]:mt-5 ">
+        <h1 className="text-[38px] text-light-black mt-5 font-medium max-[555px]:text-4xl max-[655px]:mt-5 ">
           Most popular cars rental deals
         </h1>
       </div>

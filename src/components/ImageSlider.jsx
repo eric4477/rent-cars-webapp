@@ -48,7 +48,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="slider w-full overflow-x-hidden select-none pt-28">
+    <div className="slider w-full overflow-x-hidden select-none pt-28 pb-20 max-[580px]:pb-0">
       <Slider {...settings}>
         <div className="slide">
           <img src="/landing-page/jaguar.png" alt="company-logo" />

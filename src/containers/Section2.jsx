@@ -54,8 +54,8 @@ export default function Section2() {
                   Experience driver
                 </h3>
                 <p className="text-base text-[#6D6D6D] max-w-[450px]">
-                  Don’t have driver? Don’t worry, we have many experienced
-                  driver for you.
+                  Don&apos;t have driver? Don&apos;t worry, we have many
+                  experienced driver for you.
                 </p>
               </div>
             </div>
@@ -63,7 +63,7 @@ export default function Section2() {
               <div className="w-[64px] h-[64px]">
                 <img
                   className="w-full h-full"
-                  src="/landing-page/chat.png"
+                  src="/landing-page/message.png"
                   alt="icon"
                 />
               </div>

@@ -1,6 +1,6 @@
 export default function Section2() {
   return (
-    <section className="py-24 w-full">
+    <section className="pt-24 pb-8 w-full">
       <div className="flex flex-row gap-16 relative max-[1140px]:flex-col  ">
         <div className="section-background max-[1140px]:hidden">
           <img
@@ -13,16 +13,18 @@ export default function Section2() {
           <img src="/landing-page/audi-car.png" alt="audi" />
         </div>
         <div className="flex flex-col items-start justify-start flex-1 max-[1140px]:items-center  max-[1140px]:px-7">
-          <div className=" bg-[#edf5fe] px-7 py-2 rounded-lg mb-2 ">
-            <span className="text-sm text-dark-blue font-medium">
-              WHY CHOOSE US
-            </span>
-          </div>
+          <div className="section-header flex flex-col items-start">
+            <div className=" bg-[#edf5fe] px-7 py-2 rounded-lg mb-2 ">
+              <span className="text-sm text-dark-blue font-medium">
+                WHY CHOOSE US
+              </span>
+            </div>
 
-          <h1 className="text-[38px] max-w-[600px] leading-tight mb-10  text-light-black mt-3 font-medium max-[555px]:text-4xl max-[655px]:mt-5  ">
-            We offer the best experience with our rental deals
-          </h1>
-          <div className="section-icons flex flex-col ">
+            <h1 className="text-[38px] max-w-[600px] leading-tight mb-10  text-light-black mt-3 font-medium max-[555px]:text-4xl max-[655px]:mt-5  ">
+              We offer the best experience with our rental deals
+            </h1>
+          </div>
+          <div className="section-icons flex flex-col items-start">
             <div className="section-icon flex flex-row items-center gap-5 mb-10">
               <div className="w-[64px] h-[64px]">
                 <img

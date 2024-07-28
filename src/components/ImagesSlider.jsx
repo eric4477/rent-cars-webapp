@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 
-const ImageSlider = () => {
+const ImagesSlider = () => {
   const settings = {
     dots: false,
     infinite: true,
@@ -70,4 +70,4 @@ const ImageSlider = () => {
   );
 };
 
-export default ImageSlider;
+export default ImagesSlider;

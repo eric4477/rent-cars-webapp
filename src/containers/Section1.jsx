@@ -1,4 +1,5 @@
-import ImageSlider from "../components/ImageSlider";
+import ImagesSlider from "../components/ImagesSlider";
+
 function Section1() {
   return (
     <section className="py-24">
@@ -61,7 +62,7 @@ function Section1() {
           </div>
         </div>
       </div>
-      <ImageSlider />
+      <ImagesSlider />
     </section>
   );
 }

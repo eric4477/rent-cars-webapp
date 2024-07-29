@@ -44,15 +44,6 @@ function TestimonialsSlider() {
       name: "Charlie Johnson",
       location: "From New York, US",
     },
-    {
-      id: 3,
-      imgSrc: "/landing-page/girl.png",
-      rating: 5,
-      testimonial:
-        "I have been using your services for 3 years. Your service is great, I will continue to use your service.",
-      name: "Jenny Wilson",
-      location: "From New York, US",
-    },
   ];
 
   return (

@@ -29,9 +29,9 @@
     width: 50%;
   }
   .testimonials {
-    background-image: url("../public/landing-page/bg-sec6.png"),
-      url("../public/landing-page/bg-sec6.png");
-    background-position: left 20% top 30%, right 20% top 20%;
+    background-image: url("/landing-page/bg-sec6.png"),
+      url("/landing-page/bg-sec6.png");
+    background-position: left 10% top 10%, right 10% top 0;
     background-repeat: no-repeat;
     background-color: #f7fbff;
   }
@@ -53,13 +53,14 @@
     background-size: contain;
     z-index: -1;
   }
+
   .hero-background::before {
     content: "";
     position: absolute;
-    top: -0;
-    right: 0;
+    top: -35%;
+    right: -35%;
     width: 100%;
-    height: 100%;
+    height: 140%;
     background-image: url("../public/landing-page/Frame.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -105,4 +106,11 @@
       transform: rotate(360deg);
     }
   }
+}
+
+/* Remove arrows in WebKit browsers */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

@@ -4,6 +4,7 @@ import CarsRental from "../containers/CarsRental";
 import Testimonials from "../containers/Testimonials";
 import SectionOne from "../containers/SectionOne";
 import SectionTwo from "../containers/SectionTwo";
+import Contact from "../containers/Contact";
 
 function HomePage() {
   return (
@@ -14,6 +15,7 @@ function HomePage() {
       <SectionOne />
       <SectionTwo />
       <Testimonials />
+      <Contact />
     </div>
   );
 }

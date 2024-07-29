@@ -12,7 +12,7 @@ import CarDetailsPage from "./pages/CarDetailsPage";
 
 function App() {
   return (
-    <div className="app relative max-w-[2000px] mx-auto">
+    <div className="app overflow-hidden relative max-w-[2000px] mx-auto">
       <Router>
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />

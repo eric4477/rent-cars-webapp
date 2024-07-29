@@ -10,13 +10,13 @@ function Hero() {
           alt="frame"
         />
       </div>
-      <div className="flex flex-col pt-7 max-[855px]:pt-2">
+      <div className="flex flex-col pt-7 max-[1300px]:pt-0 max-[855px]:pt-2">
         <h1
           className="text-5xl max-[1100px]:text-4xl max-[855px]:text-5xl max-[555px]:text-4xl  font-semibold w-[60%]
          max-[1300px]:w-[80%]"
         >
           Find, book and rent a car
-          <span className="text-dark-blue">Easily</span>
+          <span className="text-dark-blue"> Easily</span>
         </h1>
         <p className="text-[18px] text-black mt-6 w-[55%] max-[1300px]:w-[90%]">
           Get a car wherever and whenever you need it with your IOS and Android

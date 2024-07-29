@@ -1,6 +1,6 @@
-import car1 from "../../public/card/car1.png";
-import car2 from "../../public/card/car2.png";
-import car3 from "../../public/card/car3.png";
+import car1 from "/card/car1.png";
+import car2 from "/card/car2.png";
+import car3 from "/card/car3.png";
 
 export function getRandomImg() {
   const arr = [car1, car2, car3];

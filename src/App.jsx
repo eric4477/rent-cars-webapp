@@ -9,10 +9,11 @@ import {
 import HomePage from "./pages/HomePage";
 import CarsPage from "./pages/CarsPage";
 import CarDetailsPage from "./pages/CarDetailsPage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="app overflow-hidden relative max-w-[2000px] mx-auto">
+    <div className="app overflow-hidden">
       <Router>
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
@@ -21,6 +22,7 @@ function App() {
           <Route path="/home/cars/:id" element={<CarDetailsPage />} />
         </Routes>
       </Router>
+      <Footer />
     </div>
   );
 }

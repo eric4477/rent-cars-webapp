@@ -30,7 +30,7 @@ function NavBar() {
         <button className="hover:text-blue-600">Sign in</button>
         <button
           className="px-6 py-2 bg-dark-blue rounded-lg text-white text-center 
-        transition hover:bg-blue-600"
+        transition hover:bg-blue-600 max-[600px]:px-4"
         >
           Sign up
         </button>

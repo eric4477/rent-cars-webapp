@@ -59,7 +59,7 @@ function CarsPage() {
   };
 
   return (
-    <div className="cars-page w-[85%] mx-auto py-12">
+    <div className="cars-page w-[85%] mx-auto py-12 max-w-[2000px]">
       <header>
         <p className="text-dark-gray ">
           <Link className="text-blue-600" to="/">

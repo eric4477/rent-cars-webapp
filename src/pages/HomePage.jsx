@@ -8,7 +8,7 @@ import Contact from "../containers/Contact";
 
 function HomePage() {
   return (
-    <div className="pb-5">
+    <div className="max-w-[2000px] mx-auto">
       <NavBar />
       <Hero />
       <CarsRental />

@@ -1,4 +1,7 @@
 function Contact() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <section>
       <div className="flex flex-row justify-between w-[85%] mx-auto max-[1100px]:flex-col">
@@ -29,7 +32,10 @@ function Contact() {
               />
             </a>
           </div>
-          <form className="contact-form mt-20 w-[65%] flex flex-col items-center gap-3 max-[600px]:w-full">
+          <form
+            className="contact-form mt-20 w-[65%] flex flex-col items-center gap-3 max-[600px]:w-full"
+            onSubmit={handleSubmit}
+          >
             <input
               className="bg-[#CEDCFF] py-4 px-7 outline-none rounded-full w-full text-black placeholder:text-black"
               type="text"

@@ -9,7 +9,7 @@ function Footer() {
           <span className="logo max-[430px]:pr-[120px] ">
             <img src="/landing-page/logo-footer.png" alt="logo" />
           </span>
-          <div className="flex flex-row items-center gap-2">
+          <div className="flex flex-row items-center gap-2 text-[#D6D6D6]">
             <span className="shrink-0">
               <img src="/footer/location.png" alt="location" />
             </span>
@@ -17,13 +17,13 @@ function Footer() {
               25566 Hc 1, Glenallen, Alaska, 99588, USA
             </p>
           </div>
-          <div className="flex flex-row items-center gap-2">
+          <div className="flex flex-row items-center gap-2 text-[#D6D6D6]">
             <span className="shrink-0">
               <img src="/footer/call.png" alt="call" />
             </span>
             <p className="w-[200px] cursor-pointer">+603 4784 273 12</p>
           </div>
-          <div className="flex flex-row items-center gap-2">
+          <div className="flex flex-row items-center gap-2 text-[#D6D6D6]">
             <span className="shrink-0">
               <img src="/footer/sms.png" alt="call" />
             </span>

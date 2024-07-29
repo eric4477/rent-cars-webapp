@@ -1,10 +1,11 @@
 import { memo } from "react";
+import { Link } from "react-router-dom";
 import { GoArrowRight } from "react-icons/go";
-import starIcon from "/public/card/star.png";
-import userIcon from "/public/card/user.png";
-import frameIcon from "/public/card/Frame.png";
-import conditionIcon from "/public/card/condition.png";
-import doorsIcon from "/public/card/doors.png";
+import starIcon from "/card/star.png";
+import userIcon from "/card/user.png";
+import frameIcon from "/card/Frame.png";
+import conditionIcon from "/card/condition.png";
+import doorsIcon from "/card/doors.png";
 import {
   getRandomImg,
   getRandomRating,
@@ -69,12 +70,13 @@ function CarCard({ car, loading, error }) {
         </div>
       </div>
       <div className="card-footer mt-4 pl-2 pr-1">
-        <button
+        <Link
+          to={`/home/cars/${car.id}`}
           className="py-[10px] text-sm px-4 flex flex-row items-center justify-center gap-2 text-white rounded-md w-full
          bg-dark-blue hover:bg-blue-600"
         >
           Rent Now <GoArrowRight className="text-[20px]" />
-        </button>
+        </Link>
       </div>
     </div>
   );

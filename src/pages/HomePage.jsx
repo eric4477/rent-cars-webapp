@@ -1,9 +1,9 @@
-import Hero from "../components/Hero";
+import Hero from "../containers/Hero";
 import NavBar from "../components/NavBar";
 import CarsRental from "../containers/CarsRental";
-import Section1 from "../containers/Section1";
-import Section2 from "../containers/Section2";
 import Testimonials from "../containers/Testimonials";
+import SectionOne from "../containers/SectionOne";
+import SectionTwo from "../containers/SectionTwo";
 
 function HomePage() {
   return (
@@ -11,8 +11,8 @@ function HomePage() {
       <NavBar />
       <Hero />
       <CarsRental />
-      <Section1 />
-      <Section2 />
+      <SectionOne />
+      <SectionTwo />
       <Testimonials />
     </div>
   );

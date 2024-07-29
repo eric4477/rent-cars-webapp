@@ -1,15 +1,8 @@
-export default function Section2() {
+function SectionTwo() {
   return (
     <section className="pt-24 pb-8 w-full">
-      <div className="flex flex-row gap-16 relative max-[1140px]:flex-col  ">
-        <div className="section-background max-[1140px]:hidden">
-          <img
-            className="w-full h-full"
-            src="/landing-page/Vector.png"
-            alt="background"
-          />
-        </div>
-        <div className="flex-1 flex items-center justify-start ">
+      <div className="flex flex-row gap-16 relative max-[1140px]:flex-col">
+        <div className="car-img-container relative flex-1 flex items-center justify-start ">
           <img src="/landing-page/audi-car.png" alt="audi" />
         </div>
         <div className="flex flex-col items-start justify-start flex-1 max-[1140px]:items-center  max-[1140px]:px-7">
@@ -20,7 +13,10 @@ export default function Section2() {
               </span>
             </div>
 
-            <h1 className="text-[38px] max-w-[600px] leading-tight mb-10  text-light-black mt-3 font-medium max-[555px]:text-4xl max-[655px]:mt-5  ">
+            <h1
+              className="text-[38px] max-w-[600px] leading-tight mb-10 text-light-black mt-3 
+            font-medium max-[555px]:text-4xl max-[655px]:mt-5"
+            >
               We offer the best experience with our rental deals
             </h1>
           </div>
@@ -78,7 +74,7 @@ export default function Section2() {
                 </p>
               </div>
             </div>
-            <div className="section-icon flex flex-row items-center gap-5 ">
+            <div className="section-icon flex flex-row items-center gap-5">
               <div className="w-[64px] h-[64px]">
                 <img
                   className="w-full h-full"
@@ -102,3 +98,5 @@ export default function Section2() {
     </section>
   );
 }
+
+export default SectionTwo;

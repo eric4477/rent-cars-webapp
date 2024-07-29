@@ -15,7 +15,7 @@ function Hero() {
           className="text-5xl max-[1100px]:text-4xl max-[855px]:text-5xl max-[555px]:text-4xl  font-semibold w-[60%]
          max-[1300px]:w-[80%]"
         >
-          Find, book and rent a car{" "}
+          Find, book and rent a car
           <span className="text-dark-blue">Easily</span>
         </h1>
         <p className="text-[18px] text-black mt-6 w-[55%] max-[1300px]:w-[90%]">

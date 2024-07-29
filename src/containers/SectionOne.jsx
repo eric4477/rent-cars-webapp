@@ -1,9 +1,9 @@
 import ImagesSlider from "../components/ImagesSlider";
 
-function Section1() {
+function SectionOne() {
   return (
     <section className="py-24">
-      <div className="w-[85%] mx-auto ">
+      <div className="w-[85%] mx-auto">
         <div className="section-container flex flex-col justify-center items-center">
           <div className=" bg-[#edf5fe] px-7 py-2 rounded-lg mb-2 text-center">
             <span className="text-sm text-dark-blue font-medium">
@@ -67,4 +67,4 @@ function Section1() {
   );
 }
 
-export default Section1;
+export default SectionOne;

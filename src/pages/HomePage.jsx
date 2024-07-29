@@ -5,18 +5,22 @@ import Testimonials from "../containers/Testimonials";
 import SectionOne from "../containers/SectionOne";
 import SectionTwo from "../containers/SectionTwo";
 import Contact from "../containers/Contact";
+import Footer from "../components/Footer";
 
 function HomePage() {
   return (
-    <div className="max-w-[2000px] mx-auto">
-      <NavBar />
-      <Hero />
-      <CarsRental />
-      <SectionOne />
-      <SectionTwo />
-      <Testimonials />
-      <Contact />
-    </div>
+    <>
+      <div className="max-w-[2000px] mx-auto">
+        <NavBar />
+        <Hero />
+        <CarsRental />
+        <SectionOne />
+        <SectionTwo />
+        <Testimonials />
+        <Contact />
+      </div>
+      <Footer />
+    </>
   );
 }
 

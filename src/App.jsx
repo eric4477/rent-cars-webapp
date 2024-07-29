@@ -9,7 +9,6 @@ import {
 import HomePage from "./pages/HomePage";
 import CarsPage from "./pages/CarsPage";
 import CarDetailsPage from "./pages/CarDetailsPage";
-import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
           <Route path="/home/cars/:id" element={<CarDetailsPage />} />
         </Routes>
       </Router>
-      <Footer />
     </div>
   );
 }

@@ -54,7 +54,7 @@ function CarDetailsPage() {
         </p>
       </header>
       <div className="car-container flex flex-row justify-between gap-12 py-20  max-[1000px]:flex-col">
-        <div className=" car-img-container flex items-end relative pt-16 ">
+        <div className="car-img-container flex items-end relative pt-16 ">
           <img
             className="scale-up"
             src="/landing-page/audi-car.png"

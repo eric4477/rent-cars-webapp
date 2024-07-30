@@ -51,7 +51,7 @@ function TestimonialsSlider() {
       <Slider {...settings}>
         {cards.map((card) => (
           <div key={card.id} className="card-container px-4 ">
-            <div className="testemonial-card  flex flex-row gap-7 rounded-3xl bg-white  h-[380px] pr-2">
+            <div className="testemonial-card  flex flex-row gap-7 rounded-3xl bg-white h-[380px] pr-5">
               <div className="card-img w-1/2">
                 <img
                   className="w-full h-full object-cover rounded-l-2xl"

@@ -5,8 +5,8 @@ function Footer() {
         className="grid grid-cols-6 gap-8 pt-4 pb-12 max-[1055px]:grid-cols-5 max-[900px]:grid-cols-4
        max-[670px]:grid-cols-2  max-[670px]:gap-y-12  max-[430px]:grid-cols-1"
       >
-        <div className="col-span-2 flex flex-col gap-6 justify-start max-[670px]:col-span-1 max-[430px]:items-center">
-          <span className="logo max-[430px]:pr-[120px] ">
+        <div className="col-span-2 flex flex-col gap-6 justify-start max-[670px]:col-span-1">
+          <span className="logo">
             <img src="/landing-page/logo-footer.png" alt="logo" />
           </span>
           <div className="flex flex-row items-center gap-2 text-[#D6D6D6]">
@@ -30,7 +30,7 @@ function Footer() {
             <p className="w-[200px] cursor-pointer">rentcars@gmail.com</p>
           </div>
         </div>
-        <div className="flex flex-col justify-start max-[670px]:items-end max-[430px]:items-center">
+        <div className="flex flex-col justify-start max-[670px]:items-end max-[430px]:items-start">
           <h3 className="font-medium mb-6 text-white ">Our Product</h3>
           <div className="links flex flex-col  gap-2 max-[670px]:pr-6">
             <span className="text-sm text-[#D6D6D6] cursor-pointer">
@@ -48,10 +48,8 @@ function Footer() {
             </span>
           </div>
         </div>
-        <div className="flex flex-col justify-start max-[430px]:items-center">
-          <h3 className="font-medium mb-6 text-white max-[430px]:pr-7">
-            Resources
-          </h3>
+        <div className="flex flex-col justify-start">
+          <h3 className="font-medium mb-6 text-white ">Resources</h3>
           <div className="links flex flex-col gap-2 ">
             <span className="text-sm text-[#D6D6D6] cursor-pointer">
               Download
@@ -73,8 +71,8 @@ function Footer() {
             </span>
           </div>
         </div>
-        <div className="flex flex-col justify-start max-[670px]:items-end max-[430px]:items-center">
-          <h3 className="font-medium mb-6 text-white whitespace-nowrap ">
+        <div className="flex flex-col justify-start max-[670px]:items-end max-[430px]:items-start">
+          <h3 className="font-medium mb-6 text-white whitespace-nowrap">
             About Rentcars
           </h3>
           <div className="links flex flex-col gap-2">
@@ -95,7 +93,7 @@ function Footer() {
             </span>
           </div>
         </div>
-        <div className="flex flex-col justify-start max-[430px]:items-center">
+        <div className="flex flex-col justify-start">
           <h3 className="font-medium mb-6 text-white">Follow Us</h3>
           <div className="social-links flex flex-row items-center gap-3">
             <span className="cursor-pointer">

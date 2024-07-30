@@ -38,7 +38,7 @@ function CarDetailsPage() {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <div className="car-details-page py-12 max-w-[2000px] mx-auto">
+    <div className="car-details-page py-12 max-w-[2500px] mx-auto">
       <header className="w-[85%] mx-auto ">
         <p className="text-dark-gray ">
           <Link className="text-blue-600" to="/">

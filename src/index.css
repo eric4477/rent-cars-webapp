@@ -36,6 +36,12 @@
     background-color: #f7fbff;
   }
 
+  @media (max-width: 700px) {
+    .testimonials {
+      background-image: none;
+    }
+  }
+
   .testemonial-card {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2),
       inset 0 -1px 3px rgba(0, 0, 0, 0.2);
@@ -48,24 +54,12 @@
     left: 0;
     width: 120%;
     height: 110%;
-    background-image: url("../public/landing-page/Vector.png");
+    background-image: url("/landing-page/Vector.png");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
   }
 
-  .hero-background::before {
-    content: "";
-    position: absolute;
-    top: -35%;
-    right: -35%;
-    width: 100%;
-    height: 140%;
-    background-image: url("../public/landing-page/Frame.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
-  }
   .pagination .active {
     background-color: #007bff;
     color: #fff;

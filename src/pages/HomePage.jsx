@@ -10,15 +10,13 @@ import Footer from "../components/Footer";
 function HomePage() {
   return (
     <>
-      <div className="max-w-[2500px] mx-auto">
-        <NavBar />
-        <Hero />
-        <CarsRental />
-        <SectionOne />
-        <SectionTwo />
-        <Testimonials />
-        <Contact />
-      </div>
+      <NavBar />
+      <Hero />
+      <CarsRental />
+      <SectionOne />
+      <SectionTwo />
+      <Testimonials />
+      <Contact />
       <Footer />
     </>
   );

@@ -10,8 +10,13 @@ import HomePage from "./pages/HomePage";
 import CarsPage from "./pages/CarsPage";
 import CarDetailsPage from "./pages/CarDetailsPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import { useEffect } from "react";
+import { fetchAllCars } from "./api/fetchAllCars";
 
 function App() {
+  useEffect(() => {
+    fetchAllCars();
+  }, []);
   return (
     <div className="app overflow-hidden">
       <Router>

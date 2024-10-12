@@ -5,6 +5,8 @@ import conditionIcon from "/card/condition.png";
 import userIcon from "/card/user.png";
 import frameIcon from "/card/Frame.png";
 import doorsIcon from "/card/doors.png";
+import { IoIosColorPalette } from "react-icons/io";
+import { CiCalendarDate } from "react-icons/ci";
 
 function CarDetailsPage() {
   const { id } = useParams();
@@ -16,9 +18,9 @@ function CarDetailsPage() {
     const fetchCarDetails = async () => {
       try {
         const response = await axios.get(
-          `https://freetestapi.com/api/v1/cars/${id}`
+          `https://myfakeapi.com/api/cars/${id}`
         );
-        setCar(response.data);
+        setCar(response.data.Car);
       } catch (error) {
         setError(error);
       } finally {
@@ -39,7 +41,7 @@ function CarDetailsPage() {
 
   return (
     <div className="car-details-page py-12 max-w-[2500px] mx-auto">
-      <header className="w-[85%] mx-auto ">
+      <header className="w-[85%] mx-auto">
         <p className="text-dark-gray ">
           <Link className="text-blue-600" to="/">
             Home
@@ -49,7 +51,7 @@ function CarDetailsPage() {
             Cars
           </Link>
           <span>
-            /{car.make} {car.model}
+            /{car.car} {car.car_model}
           </span>
         </p>
       </header>
@@ -64,8 +66,8 @@ function CarDetailsPage() {
         <div className="car-info flex flex-col justify-start items-start px-10">
           <div className="car-info-header flex flex-col items-start justify-start">
             <div className=" bg-[#edf5fe] px-7 py-2 rounded-lg mb-2 ">
-              <span className="text-sm text-dark-blue font-medium">
-                WHY CHOOSE US
+              <span className="text-sm text-dark-blue font-medium uppercase">
+                why choose us
               </span>
             </div>
 
@@ -76,40 +78,28 @@ function CarDetailsPage() {
               We offer the best experience with our rental deals
             </h1>
           </div>
-          <div className="car-features mt-16 flex flex-col justify-start items-start gap-3  ">
+          <div className="car-features mt-16 flex flex-col justify-start items-start gap-3 text-dark-gray">
             <div className="flex flex-row items-center gap-1">
-              <span className="shrink-0 w-[20px] h-[20px]">
-                <img
-                  className="w-full h-full"
-                  src={conditionIcon}
-                  alt="condition"
-                />
-              </span>
-              <span className="whitespace-nowrap text-dark-gray">
-                {car.features[1]}
-              </span>
+              <CiCalendarDate size={20} />
+              <span className="whitespace-nowrap">{car.car_model_year}</span>
             </div>
             <div className="flex flex-row items-center gap-1">
               <span className="shrink-0  w-[20px] h-[20px]">
                 <img className="w-full h-full" src={userIcon} alt="user" />
               </span>
-              <span className="whitespace-nowrap text-dark-gray">
+              <span className="whitespace-nowrap">
                 {car.owners} {car.owners === 1 ? "owner" : "owners"}
               </span>
             </div>
             <div className="flex flex-row items-center gap-1">
-              <span className="shrink-0  w-[20px] h-[20px]">
-                <img className="w-full h-full" src={frameIcon} alt="frame" />
-              </span>
-              <span className="whitespace-nowrap text-dark-gray">
-                {car.transmission}
-              </span>
+              <IoIosColorPalette size={20} />
+              <span className="whitespace-nowrap">{car.car_color}</span>
             </div>
             <div className="flex flex-row items-center gap-1">
               <span className="shrink-0  w-[20px] h-[20px]">
                 <img className="w-full h-full" src={doorsIcon} alt="doors" />
               </span>
-              <span className="whitespace-nowrap text-dark-gray">2 Doors</span>
+              <span className="whitespace-nowrap">2 Doors</span>
             </div>
           </div>
         </div>

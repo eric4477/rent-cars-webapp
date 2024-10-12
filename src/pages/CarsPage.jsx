@@ -58,6 +58,14 @@ function CarsPage() {
     setCurrentPage(page);
   };
 
+  if (loading) {
+    return (
+      <div className="h-screen flex items-center justify-center">
+        <div className="spinner" />
+      </div>
+    );
+  }
+
   return (
     <div className="cars-page w-[85%] mx-auto py-12 max-w-[2500px]">
       <header>

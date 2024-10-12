@@ -16,7 +16,7 @@ export default function CarsRental() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await fetchFirstCars(4);
+        const data = await fetchFirstCars();
         setFirstCars(data);
         setLoading(false);
       } catch (error) {
